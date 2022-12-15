@@ -1,0 +1,38 @@
+
+
+$colors: (
+    theme-Orange: hsl(25, 97%, 53%),
+    theme-Orange-disabled: hsl(25, 67%, 63%),
+    theme-White: hsl(0, 0%, 100%),
+    theme-Lt-Grey: hsl(217, 12%, 63%),
+    theme-Md-Grey: hsl(216, 12%, 54%),
+    theme-Dk-Blue: hsl(213, 19%, 18%),
+    theme-darker-Blue: hsl(216, 12%, 8%)
+);
+
+$font-weights: (
+    fw4: 400,
+    fw7: 700
+);
+
+$font-Overpass: 'Overpass', sans-serif;
+$para-font-size: 0.875rem;
+
+@keyframes anime {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+// radial-gradient(farthest-side at top center, 
+// $colorr:hsl(217, 17%, 15%); 
+//  $color: hsl(216, 25%, 12%);
+ 
+// pc 
+// card-height and length from figma :  length  412px    height 416px
+
+// mobile 
+// card width and  height from figma : length 327    height 360px

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="dist/css/styles.css" />
+
+    <title>Frontend Mentor | Interactive rating component</title>
+  </head>
+  <body>
+    <main>
+      <div class="rating-card">
+        <!-- rating state start -->
+        <div class="rating-state" id="rating-state">
+          <div class="rating-logo">
+            <img src="./images/icon-star.svg" alt="" />
+          </div>
+          <h1 id="main-heading">How did we do?</h1>
+          <p id="main-para">
+            Please let us know how we did with your support request. All
+            feedback is appreciated to help us improve our offering!
+          </p>
+          <form>
+            <fieldset
+              aria-labelledby="main-heading"
+              aria-describedby="main-para"
+            >
+              <label for="rating-1" class="rating-label">
+                <input
+                  type="radio"
+                  name="rating-group"
+                  id="rating-1"
+                  value="1"
+                  class="ratingBtn"
+                  required
+                />
+                <span>1</span>
+              </label>
+
+              <label for="rating-2" class="rating-label">
+                <input
+                  type="radio"
+                  name="rating-group"
+                  id="rating-2"
+                  value="2"
+                  class="ratingBtn"
+                />
+                <span>2</span>
+              </label>
+
+              <label for="rating-3" class="rating-label">
+                <input
+                  type="radio"
+                  name="rating-group"
+                  id="rating-3"
+                  value="3"
+                  class="ratingBtn"
+                />
+                <span>3</span>
+              </label>
+
+              <label for="rating-4" class="rating-label">
+                <input
+                  type="radio"
+                  name="rating-group"
+                  id="rating-4"
+                  value="4"
+                  class="ratingBtn"
+                />
+                <span>4</span>
+              </label>
+
+              <label for="rating-5" class="rating-label">
+                <input
+                  type="radio"
+                  name="rating-group"
+                  id="rating-5"
+                  value="5"
+                  class="ratingBtn"
+                />
+                <span>5</span>
+              </label>
+            </fieldset>
+            <button id="submit-rating" type="submit">Submit</button>
+          </form>
+        </div>
+        <!-- rating state end -->
+
+        <!-- thankyou state start -->
+        <div class="aria-live" aria-live="polite">
+          <div class="thankyou-state" id="thankyou-state">
+            <div class="image-container">
+              <img
+                src="./images/illustration-thank-you.svg"
+                alt=""
+                aria-hidden="true"
+              />
+            </div>
+            <p class="rating-para">
+              You selected
+              <span id="rating-value"></span> out of 5
+            </p>
+            <h3>Thank you!</h3>
+            <p>
+              We appreciate you taking the time to give a rating. If you ever
+              need more support, don’t hesitate to get in touch!
+            </p>
+          </div>
+        </div>
+        <!-- thankyou state end -->
+      </div>
+    </main>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Siddharth</a>.
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

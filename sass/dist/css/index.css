@@ -1,0 +1,93 @@
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.rating-card {
+  font-family: "Overpass", sans-serif;
+}
+
+footer {
+  font-family: "Overpass", sans-serif;
+}
+
+.rating-state h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+@media (min-width: 576px) {
+  .rating-state h1 {
+    font-size: 1.85rem;
+  }
+}
+.rating-state p {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media (min-width: 576px) {
+  .rating-state p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+fieldset .rating-label span {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+@media (min-width: 576px) {
+  fieldset .rating-label span {
+    font-size: 1rem;
+  }
+}
+
+form button {
+  font-family: inherit;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+@media (min-width: 576px) {
+  form button {
+    font-size: 1rem;
+  }
+}
+
+.thankyou-state .rating-para {
+  font-size: 0.875rem;
+  color: hsl(25deg, 97%, 53%);
+}
+@media (min-width: 576px) {
+  .thankyou-state .rating-para {
+    font-size: 1rem;
+  }
+}
+.thankyou-state h3 {
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+@media (min-width: 576px) {
+  .thankyou-state h3 {
+    font-size: 1.8rem;
+  }
+}
+.thankyou-state p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(217deg, 12%, 63%);
+  line-height: 1.6;
+}
+@media (min-width: 576px) {
+  .thankyou-state p {
+    font-size: 1rem;
+  }
+}/*# sourceMappingURL=index.css.map */

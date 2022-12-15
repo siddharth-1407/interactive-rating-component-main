@@ -1,0 +1,90 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.rating-card{
+    font-family: $font-Overpass;
+}
+footer{
+    font-family: $font-Overpass;
+}
+
+// rating state start
+
+.rating-state{
+    h1{
+        color: map-get($colors, theme-White );
+        font-weight: map-get($font-weights, fw7 );
+        font-size: 1.5rem;
+        @include for-size(sm){
+            font-size: 1.85rem;
+        }
+    }
+    p{
+        color: map-get($colors, theme-Lt-Grey);
+        font-size: $para-font-size;
+        font-weight: map-get($font-weights, fw4 );
+        line-height: 1.6;
+        @include for-size(sm){
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+    }
+}
+fieldset{
+    
+    .rating-label{
+        span{
+            color: map-get($colors, theme-Lt-Grey );
+            font-size: 0.875rem;
+            font-weight: map-get($font-weights, fw7 );
+            @include for-size(sm){
+                font-size: 1rem;
+            }
+        }
+    }
+}
+form{
+    button{
+        font-family: inherit;
+        color: map-get($colors, theme-White );
+        font-size: 0.875rem;
+        font-weight: map-get($font-weights, fw7 );
+        text-transform: uppercase;
+        letter-spacing: 0.18em;
+        @include for-size(sm){
+            font-size: 1rem;
+        }
+    }
+}
+
+// rating state end
+
+// thank you state start
+
+.thankyou-state{
+    .rating-para{
+        font-size: $para-font-size;
+        color: map-get($colors, theme-Orange );
+        @include for-size(sm){
+            font-size: 1rem;
+        }
+    }
+    h3{
+        font-size: 1.5rem;
+        color: map-get($colors, theme-White );
+        @include for-size(sm){
+            font-size: 1.8rem;
+        }
+    }
+    p{
+        text-align: center;
+        font-size: $para-font-size;
+        color: map-get($colors, theme-Lt-Grey );
+        line-height: 1.6;
+        @include for-size(sm){
+            font-size: 1rem;
+        }
+    }
+}
+
+

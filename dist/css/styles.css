@@ -1,0 +1,357 @@
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+html, body,
+p, ol, ul, li, dl, dt, dd,
+blockquote, figure, fieldset, legend, textarea, pre, iframe,
+hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select {
+  margin: 0;
+}
+
+img,
+video {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+@keyframes anime {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.rating-card {
+  font-family: "Overpass", sans-serif;
+}
+
+footer {
+  font-family: "Overpass", sans-serif;
+}
+
+.rating-state h1 {
+  color: hsl(0deg, 0%, 100%);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+@media (min-width: 576px) {
+  .rating-state h1 {
+    font-size: 1.85rem;
+  }
+}
+.rating-state p {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+@media (min-width: 576px) {
+  .rating-state p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+}
+
+fieldset .rating-label span {
+  color: hsl(217deg, 12%, 63%);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+@media (min-width: 576px) {
+  fieldset .rating-label span {
+    font-size: 1rem;
+  }
+}
+
+form button {
+  font-family: inherit;
+  color: hsl(0deg, 0%, 100%);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+}
+@media (min-width: 576px) {
+  form button {
+    font-size: 1rem;
+  }
+}
+
+.thankyou-state .rating-para {
+  font-size: 0.875rem;
+  color: hsl(25deg, 97%, 53%);
+}
+@media (min-width: 576px) {
+  .thankyou-state .rating-para {
+    font-size: 1rem;
+  }
+}
+.thankyou-state h3 {
+  font-size: 1.5rem;
+  color: hsl(0deg, 0%, 100%);
+}
+@media (min-width: 576px) {
+  .thankyou-state h3 {
+    font-size: 1.8rem;
+  }
+}
+.thankyou-state p {
+  text-align: center;
+  font-size: 0.875rem;
+  color: hsl(217deg, 12%, 63%);
+  line-height: 1.6;
+}
+@media (min-width: 576px) {
+  .thankyou-state p {
+    font-size: 1rem;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 1.5em;
+  background-color: hsl(216deg, 12%, 8%);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  color: hsl(217deg, 12%, 63%);
+}
+footer .attribution a {
+  color: hsl(25deg, 97%, 53%);
+  text-decoration: none;
+}
+
+.rating-card {
+  min-height: 22.5em;
+  min-width: 19.5em;
+  max-width: 25.75em;
+  padding: 1.5em;
+  background-image: radial-gradient(circle, hsl(216deg, 12%, 54%), 0.2%, hsl(213deg, 19%, 18%) 5%, hsl(216deg, 12%, 8%) 155%);
+  background-position: 0em -24.5em;
+  background-size: 100% 200%;
+  border-radius: 1em;
+  display: flex;
+  align-items: stretch;
+}
+@media (min-width: 576px) {
+  .rating-card {
+    min-height: 26em;
+    background-image: radial-gradient(circle, hsl(216deg, 12%, 54%), 0.2%, hsl(213deg, 19%, 18%) 0%, hsl(216deg, 12%, 8%) 165%);
+    background-position: 0em -29.5em;
+    border-radius: 2em;
+  }
+}
+.rating-card .rating-state {
+  display: flex;
+  flex-direction: column;
+}
+
+.rating-state .rating-logo {
+  height: 2.5em;
+  width: 2.5em;
+  border-radius: 50%;
+  background-color: hsl(213deg, 19%, 18%);
+  display: grid;
+  place-items: center;
+}
+@media (min-width: 576px) {
+  .rating-state .rating-logo {
+    width: 3.25em;
+    height: 3.25em;
+  }
+}
+.rating-state h1 {
+  margin-top: 1em;
+}
+.rating-state p {
+  margin-top: 1em;
+}
+.rating-state form {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+
+fieldset {
+  display: flex;
+  justify-content: space-between;
+  border: none;
+}
+fieldset .rating-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 2.625em;
+  height: 2.625em;
+  border-radius: 50%;
+  background-color: hsl(213deg, 19%, 18%);
+  transition: 100ms;
+}
+@media (min-width: 576px) {
+  fieldset .rating-label {
+    width: 3.25em;
+    height: 3.25em;
+  }
+}
+fieldset .rating-label span {
+  background-color: transparent;
+  position: absolute;
+  transition: color 100ms;
+}
+fieldset .rating-label input {
+  width: 100%;
+  height: 100%;
+  transition: background-color 100ms border-radius 0s;
+}
+
+form button {
+  width: 100%;
+  padding: 1em;
+  border: none;
+  border-radius: 1.5em;
+  background-color: hsl(25deg, 97%, 53%);
+  transition: background-color 100ms, color 100ms;
+}
+@media (min-width: 576px) {
+  form button {
+    border-radius: 2em;
+  }
+}
+
+input[type=radio] {
+  appearance: none;
+  outline: none;
+  box-shadow: none;
+  opacity: 1;
+}
+
+input:focus-visible {
+  border-radius: 50%;
+  border: 1px solid hsl(25deg, 97%, 53%);
+}
+
+input:checked {
+  border-radius: 50%;
+  border: none;
+  background-color: hsl(217deg, 12%, 63%);
+}
+
+input:checked ~ span {
+  color: hsl(0deg, 0%, 100%);
+}
+
+@media (hover: hover) {
+  .rating-label:hover {
+    background-color: hsl(25deg, 97%, 53%);
+    cursor: pointer;
+  }
+  .rating-label:hover span {
+    color: hsl(0deg, 0%, 100%);
+  }
+  input:hover {
+    cursor: pointer;
+  }
+  form button:is(:hover, :focus) {
+    background-color: hsl(0deg, 0%, 100%);
+    color: hsl(25deg, 97%, 53%);
+    cursor: pointer;
+  }
+  form button[disabled] {
+    background-color: hsl(25deg, 67%, 63%);
+    color: hsl(0deg, 0%, 100%);
+    cursor: not-allowed;
+  }
+  form button:focus-within {
+    outline: none;
+  }
+}
+.aria-live {
+  width: inherit;
+  height: inherit;
+  display: grid;
+  place-items: center;
+}
+
+.thankyou-state {
+  display: none;
+  animation: anime 0.5s ease-in 1;
+}
+.thankyou-state .image-container {
+  width: 9em;
+  height: 6.25rem;
+  margin-bottom: 1.4375em;
+}
+@media (min-width: 576px) {
+  .thankyou-state .image-container {
+    width: 10.25em;
+    height: 6.875em;
+  }
+}
+.thankyou-state .image-container img {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+}
+.thankyou-state .rating-para {
+  background-color: hsl(213deg, 19%, 18%);
+  padding: 0.4em 1em;
+  border-radius: 1.5em;
+  margin-bottom: 1.5em;
+}
+.thankyou-state h3 {
+  margin-bottom: 0.5em;
+}
+
+.thankyou-state-active {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}/*# sourceMappingURL=styles.css.map */

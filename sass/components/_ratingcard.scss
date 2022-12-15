@@ -1,0 +1,217 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+
+.rating-card{
+    min-height: 22.5em;
+    min-width:  19.5em;
+    max-width: 25.75em;
+    padding: 1.5em;
+    background-image: radial-gradient( circle, map-get($colors, theme-Md-Grey), 0.2% ,  map-get($colors, theme-Dk-Blue) 5%, map-get($colors, theme-darker-Blue) 155%);
+    background-position: 0em -24.5em;
+    background-size: 100% 200%;
+    border-radius: 1em;
+    display: flex;
+    align-items: stretch;
+
+    @include for-size(sm){
+    min-height: 26em;
+    background-image: radial-gradient( circle , map-get($colors, theme-Md-Grey), 0.2% ,  map-get($colors, theme-Dk-Blue) 0%, map-get($colors, theme-darker-Blue) 165%);
+    background-position: 0em -29.5em;
+    border-radius: 2em;
+    }
+
+    .rating-state{
+        display: flex;
+        flex-direction: column;
+        // display: none;
+    }
+}
+
+// rating state start
+
+.rating-state{
+    .rating-logo{
+        height: 2.5em;
+        width: 2.5em;
+        border-radius: 50%;
+        background-color: map-get($colors, theme-Dk-Blue );
+        display: grid;
+        place-items: center;
+        @include for-size(sm){
+            width: 3.25em;
+            height: 3.25em;
+        }
+    }
+    h1{
+        margin-top: 1em;
+    }
+    p{
+        margin-top: 1em;
+    }
+    form{
+        margin-top: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5em;
+    }
+}
+fieldset{
+    display: flex;
+    justify-content: space-between;
+    border: none;
+    .rating-label{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width:  2.625em;
+        height:  2.625em;
+        border-radius: 50%;
+        background-color: map-get($colors, theme-Dk-Blue );
+        transition: 100ms;
+        @include for-size(sm){
+            width: 3.25em;
+            height: 3.25em;
+        }
+        
+        span{
+           background-color: transparent;
+           position: absolute;
+           transition: color 100ms;
+        }
+        input{
+           width: 100%;
+           height: 100%;
+           transition: background-color 100ms border-radius 0s;
+        } 
+        
+    }
+    
+}
+form{
+    button{
+        width: 100%;
+        padding: 1em;
+        border: none;
+        border-radius: 1.5em;
+        background-color: map-get($colors, theme-Orange);
+        transition: background-color 100ms, color 100ms;
+        @include for-size(sm){
+            border-radius: 2em;
+        }   
+    }
+        // button[disabled]{
+        //     background-color: map-get($colors, theme-Orange-disabled )
+        // }
+}
+input[type = "radio"] {
+    appearance: none;
+    outline: none;
+    box-shadow: none;
+    opacity: 1;
+} 
+input:focus-visible{
+    border-radius: 50%;
+    border: 1px solid map-get($colors, theme-Orange);
+}
+
+input:checked{
+    border-radius: 50%;
+    border: none;
+    background-color: map-get($colors, theme-Lt-Grey);
+
+}
+input:checked ~ span{
+    color: map-get($colors, theme-White );
+}
+
+
+//  label:focus-within {    
+//         background-color: map-get($colors, theme-Orange);
+//         span{
+//             color: map-get($colors, theme-White );
+//         }           
+//     }
+
+// label.active{
+//     background-color: map-get($colors, theme-Lt-Grey);
+//     span{
+//         color: map-get($colors, theme-White );
+//     }
+// }
+
+@media (hover:hover){
+
+    .rating-label:hover{
+        background-color: map-get($colors, theme-Orange );
+        cursor: pointer;
+        span{
+            color: map-get($colors, theme-White );
+        }
+    }
+    input:hover{    
+        cursor: pointer;
+    }
+    form{
+        button:is(:hover, :focus){
+            background-color: map-get($colors, theme-White );
+            color: map-get($colors, theme-Orange );
+            cursor: pointer;
+        }
+        button[disabled]{
+            background-color: map-get($colors, theme-Orange-disabled );
+            color: map-get($colors, theme-White );
+            cursor: not-allowed;
+        }
+       
+        button:focus-within{
+            outline: none;
+        } 
+    }
+}
+
+// rating-state end
+
+
+// thankyou-state start
+.aria-live{
+    width: inherit;
+    height: inherit;
+    display: grid;
+    place-items: center;
+}
+
+.thankyou-state{
+    display: none;
+    animation: anime 0.5s ease-in 1 ;
+    .image-container{
+        width: 9em;
+        height: 6.25rem;
+        margin-bottom:  1.4375em;
+        @include for-size(sm){
+            width: 10.25em;
+            height: 6.875em;
+        }
+        img{
+            object-fit: contain;
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .rating-para{
+        background-color: map-get($colors, theme-Dk-Blue);
+        padding: 0.4em 1em;
+        border-radius: 1.5em;
+        margin-bottom: 1.5em;
+    }
+    h3{
+        margin-bottom: 0.5em;
+    }
+}
+.thankyou-state-active{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+}

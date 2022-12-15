@@ -1,0 +1,27 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 1.5em;
+    background-color: map-get($colors, theme-darker-Blue );
+}
+footer{
+    position: absolute;
+    bottom: 0;
+
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        color: map-get($colors, theme-Lt-Grey );
+      }
+      .attribution a {
+        color: map-get($colors, theme-Orange );
+        text-decoration: none;
+      }
+
+}
