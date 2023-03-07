@@ -23,5 +23,6 @@ footer{
         color: map-get($colors, theme-Orange );
         
       }
-
+ a:hover, a:focus-within {
+     text-decoration: underline;
 }
